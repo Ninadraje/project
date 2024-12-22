@@ -1,0 +1,28 @@
+1) Post service : port = 9010
+
+    Create a Post-> /posts/core
+    Get a Post -> /posts/core/{postId}
+    Get All Post of a User -> /posts/core/users/{userId}/allPosts
+
+    Like a Post-> /posts/likes/{postId}
+    Unlike a Post-> /posts/likes/{postId} (Delete Mapping)
+
+-------------------------------------------------------------------------
+
+ 2) User Service : port = 9020
+
+    Create a User (Sign up) -> /users/auth/signup
+    Get a User (login) -> /users/auth/login
+
+--------------------------------------------------------------------------
+
+ 3) API gateway : port = 8081
+
+    User-service : /api/v1/users/*
+    Post-service : /api/v1/posts/*
+
+--------------------------------------------------------------------------
+
+4) Connection Service:
+
+    Get first degree connection: /connections/core/{userId}/first-degree
