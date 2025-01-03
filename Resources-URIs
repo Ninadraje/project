@@ -2,7 +2,7 @@
 
     Create a Post-> /posts/core
     Get a Post -> /posts/core/{postId}
-    Get All Post of a User -> /posts/core/users/{userId}/allPosts
+    Get All Post of a User -> /posts/core/users/allPosts
 
     Like a Post-> /posts/likes/{postId}
     Unlike a Post-> /posts/likes/{postId} (Delete Mapping)
@@ -26,3 +26,8 @@
 4) Connection Service:
 
     Get first degree connection: /connections/core/{userId}/first-degree
+    Send a Connection Request: /connections/core/request/{userId}
+    Accept a Connection Request: /connections/core/accept/{userId}
+    Reject a Connection Request: /connections/core/reject/{userId}
+
+-------------------------------------------------------------------------
