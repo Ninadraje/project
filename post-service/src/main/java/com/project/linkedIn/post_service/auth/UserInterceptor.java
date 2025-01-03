@@ -6,11 +6,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-/*
+/**
 * This will Intercept all the incoming requests.
 * From the request we will get the X-User-Id header and from
-* that header we will call the UserContextHolder to get the userId.
-*
+* that header we will call the UserContextHolder to set the userId.
+
 * This is created, so we do not have to change the controller method
 * parameters
 * */

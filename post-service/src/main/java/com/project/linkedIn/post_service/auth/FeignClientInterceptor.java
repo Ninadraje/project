@@ -4,6 +4,12 @@ import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.springframework.stereotype.Component;
 
+
+/**
+ * This Class will add the request header in the outgoing request to feign client
+ * Also this class can be used to add anything in the outgoing request through feign
+ * */
+
 @Component
 public class FeignClientInterceptor implements RequestInterceptor {
 

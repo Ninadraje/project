@@ -23,26 +23,21 @@ public class PostController {
 
     //Create a Post
     @PostMapping
-    public ResponseEntity<PostDto> createPost(@RequestBody PostRequestCreateDto postRequestCreateDto, HttpServletRequest httpServletRequest){
-
+    public ResponseEntity<PostDto> createPost(@RequestBody PostRequestCreateDto postRequestCreateDto){
         PostDto createPost= postService.createPost(postRequestCreateDto);
         return new ResponseEntity<>(createPost, HttpStatus.CREATED);
     }
 
     @GetMapping("/{postId}")
     public ResponseEntity<PostDto> getPost(@PathVariable Long postId){
-
-        Long userId= UserContextHolder.getCurrentUserId();
-
-
         PostDto post = postService.getPostById(postId);
         return ResponseEntity.ok(post);
     }
 
-    @GetMapping("/users/{userId}/allPosts")
-    public ResponseEntity<List<PostDto>> getAllPostsOfUser(@PathVariable Long userId){
+    @GetMapping("/users/allPosts")
+    public ResponseEntity<List<PostDto>> getAllPostsOfUser(){
 
-        List<PostDto> posts= postService.getAllPostsOfUser(userId);
+        List<PostDto> posts= postService.getAllPostsOfUser();
 
         return ResponseEntity.ok(posts);
     }

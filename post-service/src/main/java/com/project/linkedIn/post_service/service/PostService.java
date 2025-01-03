@@ -66,12 +66,6 @@ public class PostService {
 
          log.debug("Retrieving post with Id : {}",postId);
 
-         Long userId = UserContextHolder.getCurrentUserId();
-
-         List<PersonDto> firstConnections =connectionsClient.getFirstConnections(userId);
-
-//        TODO send Notification to all connections
-
          Post post =postRepository.findById(postId).orElseThrow(() ->
                     new ResourceNotFoundException("Post not found with id : "+postId));
 
@@ -79,7 +73,10 @@ public class PostService {
 
     }
 
-    public List<PostDto> getAllPostsOfUser(Long userId) {
+    public List<PostDto> getAllPostsOfUser() {
+
+        Long userId= UserContextHolder.getCurrentUserId();
+
         List<Post> posts=postRepository.findByUserId(userId);
 
         return posts.stream().
