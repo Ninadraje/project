@@ -1,0 +1,22 @@
+{
+  "name": "PostLikedEvent", // name of the class
+  "namespace": "com.project.linkedIn.event", // package path you want to create this class in , path should be after src/main/java
+  "type": "record", //for JSON this should be record
+  "fields": [
+    {
+      "name": "postId",
+      "type": "long",
+      "default": 0
+    },
+    {
+      "name": "creatorId",
+      "type": "long",
+      "default": 0
+    },
+    {
+      "name": "likedByUserId",
+      "type": "long",
+      "default": 0
+    }
+  ]
+}
