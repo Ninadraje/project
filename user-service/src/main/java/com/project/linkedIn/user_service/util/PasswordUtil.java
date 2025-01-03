@@ -2,6 +2,10 @@ package com.project.linkedIn.user_service.util;
 
 import org.mindrot.jbcrypt.BCrypt;
 
+/**
+ * We can use this class as a template to hash the password
+ * **/
+
 public class PasswordUtil {
 
 

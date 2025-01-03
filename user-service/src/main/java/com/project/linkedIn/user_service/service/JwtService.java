@@ -12,6 +12,11 @@ import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
+
+/**
+ * We can use this class as a template for generating JWT token
+ * */
+
 @Service
 public class JwtService {
 
