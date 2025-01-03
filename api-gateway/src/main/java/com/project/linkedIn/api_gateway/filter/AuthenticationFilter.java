@@ -10,8 +10,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 
-@Component
+/**
+ * To mutate the incoming request
+ * */
 
+@Component
 public class AuthenticationFilter extends AbstractGatewayFilterFactory<AuthenticationFilter.Config> {
 
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(AuthenticationFilter.class);
